@@ -1,0 +1,89 @@
+   <include file="Public:header" />
+   <div class="content">
+        <div class="page-header">
+          <h3 class="fl">添加应用</h3>
+          <div class="user_message fr"><i class="icon-folder-open"></i>增加应用</div>
+          <div class="cl"></div>
+        </div>
+        <form name="form1" id="form1" class="form-inline" action="{:U('Application/add')}" method="post" enctype="multipart/form-data">
+        <table class="table set_table">
+          <thead>
+            <tr>
+              <th width="11%" >名 称</th>
+              <th >内 容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>名称</td>
+              <td><input class="span4" name="name" id="name" type="text"/></td>
+            </tr>
+            <tr>
+              <td>URL地址</td>
+              <td><input class="span4" name="url" id="url" type="text"/></td>
+            </tr>
+            <tr>
+              <td>作者</td>
+              <td><input class="span4" name="author" id="author" type="text"/></td>
+            </tr>
+            <tr>
+              <td>联系方式</td>
+              <td><input class="span4" name="phone" id="phone" type="text"/></td>
+            </tr>
+            <tr>
+              <td>应用简介</td>
+              <td><textarea class="input-xlarge span5" name="intro" id="intro" cols="20" rows="8"></textarea></td>
+            </tr>
+            <tr>
+              <td>备注</td>
+              <td><textarea class="input-xlarge span5" name="remarks" id="remarks" cols="20" rows="8"></textarea></td>
+            </tr>
+          </tbody>
+        </table>
+        </form>
+        <p class="border_top"> <a class="btn btn-primary btn-small" onClick="formSubmit();">增加新应用</a> </p>
+        <!--end 首页提示信息-->
+        <div class="copyright"></div>
+        <script type="text/javascript">
+            $(".copyright").load("{:U('Index/copyright')}");
+        </script> 
+      <div class="modal hide" id="myModal">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h3>提交提示</h3>
+        </div>
+        <div class="modal-body"> <span id="modal"></span> </div>
+        <div class="modal-footer"> <a href="#" class="btn" data-dismiss="modal">关闭</a> </div>
+      </div>
+ <script type="text/javascript">
+function formSubmit(){
+  var msg='';
+  if($("#name").val()=="")
+  {
+    msg=msg + "应用名为空\n";
+  }
+  if($("#url").val()=="")
+  {
+    msg=msg + "url为空\n";
+  }
+  if($("#auther").val()=="")
+  {
+    msg=msg + "作者为空\n";
+  }
+  var length =$("#intro").val().length;
+  if(length>200 || length == 0)
+  {
+    msg=msg + "应用介绍应该小于200字且不为空\n";
+  }
+  if(msg.length > 0)
+  {
+    $( '#myModal' ).modal('show');
+    $( '#modal' ).html( '<font style="font-family:Arial;font-size:12px;color:#c3413f">'+msg+'</font>');
+  }
+  else
+  {
+    document.form1.submit();
+  }
+}
+</script>
+<include file="Public:footer" />

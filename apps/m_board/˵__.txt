@@ -1,0 +1,1 @@
+后台访问地址为 http://你的域名/index.php?a=admin

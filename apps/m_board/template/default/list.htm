@@ -1,0 +1,43 @@
+<!--include:header.htm-->
+<!--if:$master-->
+　<table width="100%" border="0" cellpadding="0" cellspacing="1" class="List">
+	<tr>
+		<th>字条编号</th>
+		<th>字条内容</th>
+		<th>发送人</th>
+		<th>接收人</th>
+		<th>日期</th>
+	</tr>
+<!--for:$lovelist $love-->
+<tr class="tr"><td class="ListA">{echo:$love[id]}</td>
+<td class="ListB"><a href="$PHP_SELF?id={echo:$love[id]}">$love[info]</a>（$love[ip]<a href=$PHP_SELF?a=admin&m=del&id={echo:$love[id]}><img src="images/close.gif" alt="删除" />)</a></td>
+<td class="ListC">$love[send]</td><td class=""ListC"">$love[pick]</td><td class=""ListD"">{$love[postdate]:date $a}</td></tr>    
+<!--/for-->  
+<tr>
+	<td colspan="5" class="ListP">
+			<a href="$PHP_SELF?a=admin&m=editpass">修改密码</a>（字条总数：$row） $dispage
+	</td>
+</tr>
+</table>
+<!--else-->
+　<table width="100%" border="0" cellpadding="0" cellspacing="1" class="List">
+	<tr>
+		<th>字条编号</th>
+		<th>字条内容</th>
+		<th>发送人</th>
+		<th>接收人</th>
+		<th>日期</th>
+	</tr>
+<!--for:$lovelist $love-->
+<tr class="tr"><td class="ListA">{echo:$love[id]}</td>
+<td class="ListB"><a href="$PHP_SELF?id={echo:$love[id]}">$love[info]</a></td>
+<td class="ListC">$love[send]</td><td class=""ListC"">$love[pick]</td><td class=""ListD"">{$love[postdate]:date $a}</td></tr>    
+<!--/for-->  
+<tr>
+	<td colspan="5" class="ListP">
+			（字条总数：$row） $dispage
+	</td>
+</tr>
+</table>
+<!--/if-->
+<!--include:footer.htm-->

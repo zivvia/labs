@@ -1,0 +1,21 @@
+<!--include:header.htm-->
+<div id="main">
+<script type="text/javascript" src="inc/index.js"></script>
+<!--php:$i = 1 -->
+<!--for:$lovelist $love-->
+<!--php:$T = 380*rnd(7)+120-->
+<!--php:$L = 740*rnd(7)+10-->
+<!--php:$Z = $page_size - $i -->
+<div id="Layer{echo:$love[id]}" class="Face{echo:$love[face]}" style="top:{echo:$T}px;left:{echo:$L}px;z-index:{echo:$Z}" onmousedown="Move(this,event)" ondblclick="Show($love[id])">
+<p class="Num">×ÖÌõ±àºÅ£º$love[id]<img src="images/close.gif" alt="¹Ø±Õ" onclick="Close($love[id])" /></p>
+<p class="Detail"><img alt="" src="images/icon$love[icon].gif" /><span class="Head">$love[pick]</span><br />$love[info]</p>
+<p class="Sign">$love[send]</p>
+<p class="Date">{$love[postdate]:date $a}</p>
+</div>  
+<!--php:$i++ -->
+<!--/for-->  
+</div>
+<!--if:$id-->
+¡¡<script type="text/javascript">Show($id);</script>
+<!--/if-->
+<!--include:footer.htm-->

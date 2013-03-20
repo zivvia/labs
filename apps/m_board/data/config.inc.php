@@ -1,0 +1,25 @@
+<?php
+  
+  /*
+   * Copyright(c)2008, TengTengsoft Inc.
+   * Link: http://www.858e.net/
+   * 
+   * File: config.php
+   * 
+   * Modified: 2011-05-03
+   * By: admin
+   *
+   * Created: 2008-07-20
+   * By: red (bayi@vip.qq.com)
+   *
+   */
+   $siteName= 'ÁôÑÔÇ½';    //ÍøÕ¾Ãû×Ö
+   $siteDomain= 'test.zjut.in';   //ÍøÕ¾ÓòÃû
+   $siteDescription= ''; //ÃèÊö
+   $siteKeywords= '';  //ÍøÕ¾¹Ø¼ü´Ê
+   $adminemail= 'admin@admin.com';//ÏµÍ³E-Mail
+   $TVersion = '1.0';
+   $badkey = "½­ÔóÃñ|ºú½õÌÎ|µËÐ¡Æ½";
+   $page_size = 15;
+   $love_size = 50;
+?>
