@@ -1,4 +1,4 @@
-<?
+<?php
 
 
 $username = trim($_POST["username"]);
@@ -50,6 +50,7 @@ if($username == "\'or\'=\'or\'" || $username == "\'or\' = \'or\'" || $spassword 
   }
   else
   {
+    echo "<h1>错啦错啦</h1>";
     echo "<a href='./index2.php'>返回</a>";
   }
 //	echo "<script>setTimeout(function(){ location.href='main.php'; }, 2000)</script>";

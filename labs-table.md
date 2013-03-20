@@ -47,3 +47,7 @@ create table users(
     username varchar(70) not null,
     password varchar(70) not null
 );
+
+insert into news values('19920618','恭喜你通过第一关','下一关的地 址在<a href="./admin-auth/index.php">这里</a>');
+
+insert into users values('1','suzie','123456');

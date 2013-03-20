@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=utf-8" />
+<meta charset="utf-8" />
 <link href="../assets/styles/core.css" rel="stylesheet" type="text/css">
 <title>难度 4/5。</title>
 </head>
