@@ -1,5 +1,5 @@
 ﻿function inizializza(){
-    document.location = '#job_a';
+    document.location = '#job';
     document.getElementById('game').style.visibility = 'visible';
     document.getElementById('job').style.visibility = 'visible';
     document.getElementById('fun').style.visibility = 'visible';
